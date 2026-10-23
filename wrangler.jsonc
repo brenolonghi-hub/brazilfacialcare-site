@@ -12,8 +12,7 @@
     {
       "binding": "DB",
       "database_name": "brazilfacialcare",
-      // Replace with the id shown after creating the database in the Cloudflare dashboard.
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "2deb2062-b4d3-40a5-befe-5eedb9590dc3",
       "migrations_dir": "migrations"
     }
   ],
