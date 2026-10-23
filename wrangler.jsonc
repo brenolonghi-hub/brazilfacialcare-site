@@ -20,6 +20,6 @@
   "send_email": [{ "name": "NOTIFY" }],
   "vars": {
     "NOTIFY_FROM": "site@brazilfacialcare.com",
-    "NOTIFY_TO": ""
+    "NOTIFY_TO": "contato@fidelco.com.br"
   }
 }
