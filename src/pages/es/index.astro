@@ -1,0 +1,116 @@
+---
+import Base from '../../layouts/Base.astro';
+import { brand } from '../../config';
+
+const nav = [
+  { href: '#como-funciona', label: 'Cómo funciona' },
+  { href: '#preguntas', label: 'Preguntas' },
+  { href: '#novedades', label: 'Recibir novedades' },
+];
+---
+<Base
+  lang="es"
+  title="Estética facial en Brasil, en tu idioma"
+  description={`${brand.name} acompaña a pacientes internacionales que viajan a Brasil para tratamientos de estética facial, con intérpretes profesionales y apoyo en cada etapa.`}
+  nav={nav}
+  alternates={{ pt: '/pt/', en: '/en/', es: '/es/' }}
+>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Próximamente</p>
+      <h1>Estética facial en Brasil, con un intérprete a tu lado.</h1>
+      <p class="lead">
+        Brasil cuenta con profesionales experimentados en estética facial. {brand.name} te ayuda a entender cada
+        conversación, cada consentimiento y cada indicación de cuidados, desde tu primera consulta en línea hasta el seguimiento en casa.
+      </p>
+      <div class="actions">
+        <a class="btn" href="#novedades">Avísame cuando lancen</a>
+        <a class="btn ghost" href="#como-funciona">Cómo funciona</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <p class="eyebrow">Qué hacemos</p>
+      <h2>Nos ocupamos de la comunicación para que te concentres en tu cuidado.</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Profesionales habilitados y verificados</h3>
+          <p>Cada dentista y médico de nuestra red tiene registro activo en su consejo profesional brasileño, y lo verificamos.</p>
+        </div>
+        <div class="card">
+          <h3>Un intérprete profesional</h3>
+          <p>Un intérprete te acompaña en las consultas y citas, para que nada se pierda en la traducción.</p>
+        </div>
+        <div class="card">
+          <h3>Ayuda con tu viaje</h3>
+          <p>Orientación sobre viaje, alojamiento, traslados y agenda.</p>
+        </div>
+        <div class="card">
+          <h3>Seguimiento al volver</h3>
+          <p>Seguimos en contacto cuando regresas a casa y organizamos consultas en línea con tu profesional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona">
+    <div class="wrap">
+      <p class="eyebrow">Cómo funciona</p>
+      <h2>Cinco pasos, un solo punto de contacto.</h2>
+      <ol class="steps">
+        <li><strong>Cuéntanos qué buscas</strong><span>Comparte tus objetivos y fechas de viaje. Sin compromiso.</span></li>
+        <li><strong>Conoce profesionales de nuestra red</strong><span>Te presentamos profesionales habilitados según tus necesidades. Tú eliges libremente.</span></li>
+        <li><strong>Consulta en línea antes del viaje</strong><span>El profesional evalúa tu caso a distancia, con nuestro intérprete, y te dice si el tratamiento es adecuado.</span></li>
+        <li><strong>Tu tratamiento en Brasil</strong><span>Te acompañamos a las citas e interpretamos cada explicación e indicación.</span></li>
+        <li><strong>De vuelta en casa, con apoyo</strong><span>Te ayudamos con dudas y consultas de seguimiento en línea con tu profesional.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="alt" id="preguntas">
+    <div class="wrap prose">
+      <p class="eyebrow">Preguntas</p>
+      <h2>Lo que conviene saber.</h2>
+      <details>
+        <summary>¿Son una clínica?</summary>
+        <p>No. No prestamos servicios médicos ni odontológicos. Las decisiones clínicas y el tratamiento son responsabilidad exclusiva del profesional habilitado que elijas. Nuestro papel es la interpretación, la comunicación y el apoyo en el viaje.</p>
+      </details>
+      <details>
+        <summary>¿Qué idiomas cubren?</summary>
+        <p>Español e inglés, con un equipo multilingüe para otros idiomas bajo solicitud.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto cuesta?</summary>
+        <p>Nuestros servicios de apoyo se ofrecerán en paquetes con precios claros, acordados antes de empezar. Los honorarios del tratamiento los define directamente el profesional que elijas.</p>
+      </details>
+      <details>
+        <summary>¿Garantizan resultados?</summary>
+        <p>Nadie puede garantizar resultados de forma ética en tratamientos estéticos. Un profesional responsable te explicará qué es realista en tu caso, y nosotros nos aseguramos de que lo entiendas por completo.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="novedades">
+    <div class="wrap" style="max-width:720px">
+      <p class="eyebrow">Recibir novedades</p>
+      <h2>Sé de los primeros en saber cuándo lanzamos.</h2>
+      <p class="lead">Déjanos tus datos y te escribiremos cuando el servicio esté disponible. Por favor, no compartas información de salud aquí.</p>
+      <form class="form" name="waitlist-es" method="POST" action="/api/submit">
+        <input type="hidden" name="form-name" value="waitlist-es" />
+        <p class="hidden"><label>Dejar vacío: <input name="hp_field" tabindex="-1" autocomplete="off" /></label></p>
+        <div class="row">
+          <label>Nombre<input name="nombre" required autocomplete="name" /></label>
+          <label>Correo electrónico<input type="email" name="email" required autocomplete="email" /></label>
+        </div>
+        <label>País de residencia<input name="pais" required autocomplete="country-name" /></label>
+        <label class="consent">
+          <input type="checkbox" name="consentimiento" value="si" required />
+          <span>Acepto que {brand.name} guarde mi nombre, correo y país para contactarme sobre el lanzamiento, según la <a href="/es/privacidad/">Política de privacidad</a>. Puedo retirar mi consentimiento en cualquier momento.</span>
+        </label>
+        <div><button class="btn" type="submit">Avísame</button></div>
+      </form>
+    </div>
+  </section>
+</Base>

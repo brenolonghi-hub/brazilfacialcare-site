@@ -1,0 +1,30 @@
+---
+import { brand, languages, type Lang } from '../config';
+
+interface Props {
+  lang: Lang;
+  nav: { href: string; label: string }[];
+  alternates: Record<Lang, string>;
+}
+const { lang, nav, alternates } = Astro.props;
+---
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href={languages[lang].home}>
+      <img src="/favicon.svg" alt="" />
+      {brand.name}
+    </a>
+    <nav class="nav">
+      <span class="links">
+        {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+      </span>
+      <span class="lang">
+        {(Object.keys(languages) as Lang[]).map((l) => (
+          <a href={alternates[l]} hreflang={l} title={languages[l].label} aria-current={l === lang ? 'true' : undefined}>
+            {l.toUpperCase()}
+          </a>
+        ))}
+      </span>
+    </nav>
+  </div>
+</header>

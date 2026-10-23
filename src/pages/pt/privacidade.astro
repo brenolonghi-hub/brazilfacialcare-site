@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import { brand } from '../../config';
+---
+<Base lang="pt" title="Política de privacidade" description={`Como a ${brand.name} trata dados pessoais.`} alternates={{ pt: '/pt/privacidade/', en: '/en/privacy/', es: '/es/privacidad/' }}>
+  <section>
+    <div class="wrap prose">
+      <p class="draft-note">Rascunho para revisão jurídica. Os campos entre colchetes precisam ser preenchidos antes da publicação.</p>
+      <h1>Política de privacidade</h1>
+      <p>Última atualização: 23 de outubro de 2026.</p>
+
+      <h2>Quem somos</h2>
+      <p>{brand.name} é um serviço de interpretação, acompanhamento e apoio logístico a pacientes internacionais, operado por Intercultural Fidelity Bureau Ltda (Fidelco), CNPJ 68.588.419/0001-40, com sede no Condomínio Sossego, 10, Latão, Coimbra (MG), CEP 36550-000. Não prestamos serviços de saúde.</p>
+
+      <h2>Quais dados coletamos</h2>
+      <ul>
+        <li><strong>Profissionais:</strong> nome, profissão, número de registro no conselho, especialidade, cidade, procedimentos realizados, idiomas, e-mail, WhatsApp, site ou rede social e as informações que você escrever no formulário.</li>
+        <li><strong>Pacientes interessados:</strong> nome, e-mail e país de residência. Nesta fase não coletamos dados de saúde.</li>
+      </ul>
+
+      <h2>Para que usamos</h2>
+      <ul>
+        <li>Entrar em contato e avaliar a participação de profissionais na rede, incluindo a verificação do registro no conselho.</li>
+        <li>Avisar pacientes interessados sobre o lançamento do serviço.</li>
+      </ul>
+      <p>A base legal é o seu consentimento (art. 7º, I, da LGPD), que pode ser retirado a qualquer momento. Para visitantes da União Europeia, a base é o consentimento previsto no art. 6(1)(a) do GDPR.</p>
+
+      <h2>Com quem compartilhamos</h2>
+      <p>Não vendemos dados. Usamos fornecedores de hospedagem e formulários (Cloudflare, Inc.), que podem armazenar dados fora do Brasil com salvaguardas adequadas. Os dados públicos do perfil de um profissional só serão mostrados a pacientes com autorização específica dele.</p>
+
+      <h2>Por quanto tempo guardamos</h2>
+      <p>Enquanto houver interesse na participação ou no aviso de lançamento, ou até você pedir a exclusão. Depois disso, os dados são apagados, salvo obrigação legal.</p>
+
+      <h2>Seus direitos</h2>
+      <p>Você pode pedir acesso, correção, portabilidade ou exclusão dos seus dados e revogar o consentimento. Escreva para <a href={`mailto:${brand.email}`}>{brand.email}</a>. Encarregado pelo tratamento de dados: [nome].</p>
+
+      <h2>Cookies</h2>
+      <p>Este site não usa cookies de publicidade nem de rastreamento. Se isso mudar, pediremos seu consentimento antes.</p>
+    </div>
+  </section>
+</Base>

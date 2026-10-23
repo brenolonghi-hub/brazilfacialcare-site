@@ -1,0 +1,116 @@
+---
+import Base from '../../layouts/Base.astro';
+import { brand } from '../../config';
+
+const nav = [
+  { href: '#how-it-works', label: 'How it works' },
+  { href: '#questions', label: 'Questions' },
+  { href: '#waitlist', label: 'Get updates' },
+];
+---
+<Base
+  lang="en"
+  title="Facial aesthetics in Brazil, in your language"
+  description={`${brand.name} accompanies international patients who travel to Brazil for facial aesthetic treatments, with professional interpreters and support at every step.`}
+  nav={nav}
+  alternates={{ pt: '/pt/', en: '/en/', es: '/es/' }}
+>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Coming soon</p>
+      <h1>Facial aesthetics in Brazil, with an interpreter by your side.</h1>
+      <p class="lead">
+        Brazil is home to experienced professionals in facial aesthetics. {brand.name} helps you understand every
+        conversation, every consent form and every aftercare instruction, from your first online consultation to your follow-up at home.
+      </p>
+      <div class="actions">
+        <a class="btn" href="#waitlist">Notify me when you launch</a>
+        <a class="btn ghost" href="#how-it-works">How it works</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <p class="eyebrow">What we do</p>
+      <h2>We take care of communication, so you can focus on your care.</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Licensed, verified professionals</h3>
+          <p>Every dentist and doctor in our network has an active license with their Brazilian professional council, which we check.</p>
+        </div>
+        <div class="card">
+          <h3>A professional interpreter</h3>
+          <p>An interpreter joins your consultations and appointments, so nothing gets lost in translation.</p>
+        </div>
+        <div class="card">
+          <h3>Help with your trip</h3>
+          <p>Guidance on travel, accommodation, local transport and scheduling.</p>
+        </div>
+        <div class="card">
+          <h3>Follow-up after you return</h3>
+          <p>We stay in touch after you go home and arrange online check-ins with your professional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>Five steps, one point of contact.</h2>
+      <ol class="steps">
+        <li><strong>Tell us what you are looking for</strong><span>Share your goals and travel dates. No commitment.</span></li>
+        <li><strong>Meet professionals from our network</strong><span>We introduce licensed professionals that fit your needs. You choose freely.</span></li>
+        <li><strong>Online consultation before you travel</strong><span>The professional assesses your case remotely, with our interpreter, and tells you whether a treatment is suitable.</span></li>
+        <li><strong>Your treatment in Brazil</strong><span>We accompany you to appointments and interpret every explanation and instruction.</span></li>
+        <li><strong>Back home, still supported</strong><span>We help with questions and online follow-ups with your professional.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="alt" id="questions">
+    <div class="wrap prose">
+      <p class="eyebrow">Questions</p>
+      <h2>Good to know.</h2>
+      <details>
+        <summary>Are you a clinic?</summary>
+        <p>No. We do not provide medical or dental services. Clinical decisions and treatment are the sole responsibility of the licensed professional you choose. Our role is interpretation, communication and travel support.</p>
+      </details>
+      <details>
+        <summary>Which languages do you cover?</summary>
+        <p>English and Spanish, with a multilingual team for other languages on request.</p>
+      </details>
+      <details>
+        <summary>How much does it cost?</summary>
+        <p>Our support services will be offered as packages with clearly stated prices, agreed before anything starts. Treatment fees are set directly by the professional you choose.</p>
+      </details>
+      <details>
+        <summary>Can you guarantee results?</summary>
+        <p>No one can ethically guarantee results in aesthetic treatments. A responsible professional will explain what is realistic for you, and we make sure you understand it fully.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="waitlist">
+    <div class="wrap" style="max-width:720px">
+      <p class="eyebrow">Get updates</p>
+      <h2>Be the first to know when we launch.</h2>
+      <p class="lead">Leave your details and we will write to you when the service opens. Please do not share health information here.</p>
+      <form class="form" name="waitlist-en" method="POST" action="/api/submit">
+        <input type="hidden" name="form-name" value="waitlist-en" />
+        <p class="hidden"><label>Leave empty: <input name="hp_field" tabindex="-1" autocomplete="off" /></label></p>
+        <div class="row">
+          <label>Name<input name="name" required autocomplete="name" /></label>
+          <label>Email<input type="email" name="email" required autocomplete="email" /></label>
+        </div>
+        <label>Country of residence<input name="country" required autocomplete="country-name" /></label>
+        <label class="consent">
+          <input type="checkbox" name="consent" value="yes" required />
+          <span>I agree that {brand.name} may store my name, email and country to contact me about the launch, as described in the <a href="/en/privacy/">Privacy policy</a>. I can withdraw consent at any time.</span>
+        </label>
+        <div><button class="btn" type="submit">Notify me</button></div>
+      </form>
+    </div>
+  </section>
+</Base>

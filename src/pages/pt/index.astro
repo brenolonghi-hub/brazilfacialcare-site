@@ -1,0 +1,210 @@
+---
+import Base from '../../layouts/Base.astro';
+import { brand } from '../../config';
+
+const nav = [
+  { href: '#como-funciona', label: 'Como funciona' },
+  { href: '#criterios', label: 'Critérios' },
+  { href: '#perguntas', label: 'Perguntas' },
+  { href: '#cadastro', label: 'Pré-cadastro' },
+];
+
+const procedures = [
+  'Toxina botulínica',
+  'Preenchimento com ácido hialurônico',
+  'Bioestimuladores de colágeno',
+  'Fios de sustentação',
+  'Lipoplastia de papada',
+  'Rinomodelação',
+  'Harmonização orofacial completa',
+  'Cirurgia plástica facial',
+  'Lentes e facetas dentais',
+  'Outros',
+];
+
+const languagesSpoken = ['Inglês', 'Espanhol', 'Francês', 'Alemão', 'Italiano', 'Outro'];
+---
+<Base
+  lang="pt"
+  title="Receba pacientes internacionais"
+  description={`${brand.name}: interpretação e acompanhamento para dentistas e médicos que querem atender pacientes de outros países em estética facial.`}
+  nav={nav}
+  alternates={{ pt: '/pt/', en: '/en/', es: '/es/' }}
+>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Para dentistas e médicos</p>
+      <h1>Atenda pacientes internacionais sem a barreira do idioma.</h1>
+      <p class="lead">
+        A {brand.name} acompanha pacientes estrangeiros que vêm ao Brasil para procedimentos de estética facial.
+        Cuidamos da interpretação, da comunicação e da logística. Você cuida do que faz de melhor.
+      </p>
+      <div class="actions">
+        <a class="btn" href="#cadastro">Quero fazer o pré-cadastro</a>
+        <a class="btn ghost" href="#como-funciona">Entender como funciona</a>
+      </div>
+      <p class="hero-note">Estamos formando a rede de profissionais parceiros. O pré-cadastro é gratuito e não gera compromisso.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="o-que-oferecemos">
+    <div class="wrap">
+      <p class="eyebrow">O que oferecemos</p>
+      <h2>Uma ponte entre o seu consultório e o paciente estrangeiro.</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Interpretação profissional</h3>
+          <p>Intérprete presente na consulta, no procedimento e no retorno, em inglês e espanhol, com equipe multilíngue para outros idiomas.</p>
+        </div>
+        <div class="card">
+          <h3>Consentimento bem compreendido</h3>
+          <p>Ajudamos o paciente a entender riscos, cuidados e o termo de consentimento no próprio idioma, o que protege você e ele.</p>
+        </div>
+        <div class="card">
+          <h3>Logística do paciente</h3>
+          <p>Orientação sobre viagem, hospedagem, deslocamentos e agenda, para o paciente chegar no horário e preparado.</p>
+        </div>
+        <div class="card">
+          <h3>Acompanhamento após o retorno</h3>
+          <p>Mantemos o contato com o paciente depois que ele volta ao seu país e fazemos a ponte para teleconsultas de acompanhamento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona">
+    <div class="wrap">
+      <p class="eyebrow">Como funciona</p>
+      <h2>O caminho do paciente, etapa por etapa.</h2>
+      <ol class="steps">
+        <li><strong>O paciente nos procura</strong><span>Pessoas de outros países chegam até nós em busca de estética facial no Brasil.</span></li>
+        <li><strong>Apresentamos profissionais verificados</strong><span>Indicamos profissionais da rede de acordo com a cidade, o procedimento e o idioma. A escolha é sempre do paciente.</span></li>
+        <li><strong>Teleconsulta antes da viagem</strong><span>Você avalia o caso a distância, com nosso intérprete, e decide se o procedimento é indicado.</span></li>
+        <li><strong>Atendimento no Brasil</strong><span>Acompanhamos o paciente nas consultas e no procedimento, interpretando cada orientação.</span></li>
+        <li><strong>Retorno para casa e seguimento</strong><span>Seguimos em contato para dúvidas, cuidados e teleconsultas de revisão.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="callout">
+        <p class="eyebrow" style="color:#e8c49c">Transparência</p>
+        <h2>Não cobramos comissão por paciente.</h2>
+        <p>
+          Os códigos de ética da odontologia e da medicina proíbem pagar ou receber por paciente encaminhado.
+          Por isso, nosso trabalho é remunerado por serviço efetivamente prestado, como horas de interpretação,
+          tradução de documentos e logística, e nunca pelo número de pacientes. O paciente escolhe o profissional
+          livremente, e você define seus honorários diretamente com ele.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="criterios">
+    <div class="wrap">
+      <p class="eyebrow">Critérios de participação</p>
+      <h2>Quem pode fazer parte da rede.</h2>
+      <p class="lead">Pacientes estrangeiros confiam no Brasil porque confiam em quem vai atendê-los. Por isso verificamos cada profissional.</p>
+      <ul class="checks">
+        <li>Inscrição ativa no CRO ou no CRM, sem impedimentos éticos.</li>
+        <li>Formação comprovada nos procedimentos que oferece, dentro das competências do seu conselho.</li>
+        <li>Consultório ou clínica com alvará sanitário e estrutura adequada aos procedimentos.</li>
+        <li>Disponibilidade para teleconsulta antes da viagem e para seguimento a distância.</li>
+        <li>Plano claro para lidar com intercorrências, inclusive depois que o paciente voltar ao seu país.</li>
+        <li>Seguro de responsabilidade civil profissional (recomendado).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="alt" id="perguntas">
+    <div class="wrap prose">
+      <p class="eyebrow">Perguntas frequentes</p>
+      <h2>Dúvidas comuns dos profissionais.</h2>
+      <details>
+        <summary>Quanto custa participar?</summary>
+        <p>O pré-cadastro e a participação na rede são gratuitos durante o lançamento. Os serviços de interpretação e acompanhamento são cobrados por serviço prestado, com valores combinados antes, e podem ser pagos pelo paciente ou pelo profissional.</p>
+      </details>
+      <details>
+        <summary>Vocês garantem um número de pacientes?</summary>
+        <p>Não. Estamos no início e preferimos ser transparentes: vamos apresentar os profissionais da rede aos pacientes interessados, mas a escolha é sempre do paciente.</p>
+      </details>
+      <details>
+        <summary>Quem é responsável pelo atendimento clínico?</summary>
+        <p>O profissional. Nosso papel é de comunicação, interpretação e logística. Não fazemos indicação clínica nem interferimos na conduta.</p>
+      </details>
+      <details>
+        <summary>Preciso falar outro idioma?</summary>
+        <p>Não. O intérprete acompanha as consultas e o procedimento. Se você ou sua equipe falam outro idioma, isso é um diferencial e pode constar no seu perfil.</p>
+      </details>
+      <details>
+        <summary>Médicos e dentistas podem participar?</summary>
+        <p>Sim. Cada profissional atua dentro das competências definidas pelo seu próprio conselho, CFO ou CFM.</p>
+      </details>
+      <details>
+        <summary>Em quais cidades vocês atuam?</summary>
+        <p>Estamos mapeando os profissionais interessados agora. As cidades com mais profissionais cadastrados serão as primeiras a receber pacientes.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="cadastro">
+    <div class="wrap" style="max-width:820px">
+      <p class="eyebrow">Pré-cadastro</p>
+      <h2>Quero receber pacientes internacionais.</h2>
+      <p class="lead">Preencha em 3 minutos. Entraremos em contato para uma conversa e para a verificação dos seus dados.</p>
+
+      <form class="form" name="pre-cadastro-profissional" method="POST" action="/api/submit">
+        <input type="hidden" name="form-name" value="pre-cadastro-profissional" />
+        <p class="hidden"><label>Não preencha: <input name="hp_field" tabindex="-1" autocomplete="off" /></label></p>
+
+        <div class="row">
+          <label>Nome completo<input name="nome" required autocomplete="name" /></label>
+          <label>Profissão
+            <select name="profissao" required>
+              <option value="">Selecione</option>
+              <option>Cirurgião-dentista</option>
+              <option>Médico</option>
+            </select>
+          </label>
+        </div>
+        <div class="row">
+          <label>Conselho e número (ex.: CRO-SP 12345)<input name="registro" required /></label>
+          <label>Especialidade<input name="especialidade" placeholder="Ex.: HOF, dermatologia, cirurgia plástica" /></label>
+        </div>
+        <div class="row">
+          <label>Cidade<input name="cidade" required autocomplete="address-level2" /></label>
+          <label>Estado (UF)<input name="uf" required maxlength="2" /></label>
+        </div>
+
+        <fieldset>
+          <legend>Procedimentos que você realiza</legend>
+          <div class="options">
+            {procedures.map((p) => <label class="option"><input type="checkbox" name="procedimentos" value={p} />{p}</label>)}
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Idiomas falados por você ou sua equipe</legend>
+          <div class="options">
+            {languagesSpoken.map((l) => <label class="option"><input type="checkbox" name="idiomas" value={l} />{l}</label>)}
+          </div>
+        </fieldset>
+
+        <div class="row">
+          <label>E-mail<input type="email" name="email" required autocomplete="email" /></label>
+          <label>WhatsApp<input type="tel" name="whatsapp" required autocomplete="tel" /></label>
+        </div>
+        <label>Site ou Instagram profissional<input name="site" placeholder="https://" /></label>
+        <label>Já atendeu pacientes estrangeiros? Conte um pouco.<textarea name="mensagem"></textarea></label>
+
+        <label class="consent">
+          <input type="checkbox" name="consentimento_lgpd" value="sim" required />
+          <span>Autorizo o uso dos meus dados para contato e avaliação da minha participação na rede, conforme a <a href="/pt/privacidade/">Política de privacidade</a>. Posso pedir a exclusão a qualquer momento.</span>
+        </label>
+
+        <div><button class="btn" type="submit">Enviar pré-cadastro</button></div>
+      </form>
+    </div>
+  </section>
+</Base>

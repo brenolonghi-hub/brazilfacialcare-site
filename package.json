@@ -1,0 +1,19 @@
+{
+  "name": "site-hof",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "astro build && wrangler deploy"
+  },
+  "dependencies": {
+    "astro": "^5.18.2"
+  },
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261023.1",
+    "wrangler": "^4.152.0"
+  }
+}

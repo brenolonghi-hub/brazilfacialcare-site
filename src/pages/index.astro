@@ -1,0 +1,15 @@
+---
+// Root: send visitors to their browser language, Portuguese by default.
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=/pt/" />
+    <script is:inline>
+      const l = (navigator.language || 'pt').slice(0, 2);
+      location.replace(l === 'en' ? '/en/' : l === 'es' ? '/es/' : '/pt/');
+    </script>
+  </head>
+  <body><a href="/pt/">Português</a> · <a href="/en/">English</a> · <a href="/es/">Español</a></body>
+</html>

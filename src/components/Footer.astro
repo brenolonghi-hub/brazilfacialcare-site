@@ -1,0 +1,23 @@
+---
+import { brand, type Lang } from '../config';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+
+const t = {
+  pt: { privacy: 'Política de privacidade', privacyHref: '/pt/privacidade/', note: 'Não prestamos serviços de saúde. O atendimento clínico é responsabilidade exclusiva do profissional escolhido pelo paciente.' },
+  en: { privacy: 'Privacy policy', privacyHref: '/en/privacy/', note: 'We do not provide medical services. Clinical care is the sole responsibility of the licensed professional chosen by the patient.' },
+  es: { privacy: 'Política de privacidad', privacyHref: '/es/privacidad/', note: 'No prestamos servicios de salud. La atención clínica es responsabilidad exclusiva del profesional elegido por el paciente.' },
+}[lang];
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <strong>{brand.name}</strong> © {new Date().getFullYear()}<br />
+      <span>{t.note}</span>
+    </div>
+    <div>
+      <a href={`mailto:${brand.email}`}>{brand.email}</a> · <a href={t.privacyHref}>{t.privacy}</a>
+    </div>
+  </div>
+</footer>

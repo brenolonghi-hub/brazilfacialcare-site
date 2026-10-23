@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import { brand } from '../../config';
+---
+<Base lang="en" title="Privacy policy" description={`How ${brand.name} handles personal data.`} alternates={{ pt: '/pt/privacidade/', en: '/en/privacy/', es: '/es/privacidad/' }}>
+  <section>
+    <div class="wrap prose">
+      <p class="draft-note">Draft pending legal review. Fields in brackets must be completed before publication.</p>
+      <h1>Privacy policy</h1>
+      <p>Last updated: October 23, 2026.</p>
+
+      <h2>Who we are</h2>
+      <p>{brand.name} provides interpretation, accompaniment and travel support for international patients. It is operated by Intercultural Fidelity Bureau Ltda (Fidelco), Brazilian company registration (CNPJ) 68.588.419/0001-40, Condomínio Sossego, 10, Latão, Coimbra, Minas Gerais, Brazil, postcode 36550-000. We do not provide medical or dental services.</p>
+
+      <h2>What we collect</h2>
+      <p>Your name, email address and country of residence. We do not collect health information at this stage.</p>
+
+      <h2>Why we use it</h2>
+      <p>To let you know when our service launches. The legal basis is your consent (Article 6(1)(a) GDPR and Article 7, I, of Brazil's LGPD). You can withdraw it at any time.</p>
+
+      <h2>Who we share it with</h2>
+      <p>We never sell your data. Our hosting and form provider (Cloudflare, Inc.) processes it on our behalf, possibly outside your country, under appropriate safeguards such as standard contractual clauses.</p>
+
+      <h2>How long we keep it</h2>
+      <p>Until the launch announcement has been sent and you no longer wish to hear from us, or until you ask us to delete it.</p>
+
+      <h2>Your rights</h2>
+      <p>You may request access to, correction, portability or deletion of your data, object to processing, and withdraw consent by writing to <a href={`mailto:${brand.email}`}>{brand.email}</a>. You may also lodge a complaint with your local data protection authority.</p>
+
+      <h2>Cookies</h2>
+      <p>This site does not use advertising or tracking cookies. If that changes, we will ask for your consent first.</p>
+    </div>
+  </section>
+</Base>
